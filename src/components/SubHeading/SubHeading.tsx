@@ -1,7 +1,11 @@
 import './SubHeading.scss'
 
-const SubHeading = () => {
-  return <h2 className="subHeading">And this is a sub heading</h2>
+type SubHeadingProps = {
+  text: string
+}
+
+const SubHeading = ({ text }: SubHeadingProps) => {
+  return <h2 className="subHeading">{text}</h2>
 }
 
 export default SubHeading
