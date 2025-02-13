@@ -5,7 +5,7 @@ type HeaderProps = {
 }
 
 const Heading = ({ title }: HeaderProps) => {
-  return <h1 className="heading">{title}</h1>
+  return <h1 className="Heading">{title}</h1>
 }
 
 export default Heading

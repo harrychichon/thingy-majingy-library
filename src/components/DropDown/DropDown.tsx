@@ -17,19 +17,21 @@ const DropDown = ({
 }: DropDownProps) => {
   return (
     <>
-      <label className="DropDownLabel" htmlFor={labelFor}>
-        {labelText}
-      </label>
-      <select className="DropDownSelect" name={selectName} id={selectId}>
-        {items.map((item) => (
-          <option
-            className="DropDownOption"
-            value={item.toString().toLowerCase()}
-          >
-            {item}
-          </option>
-        ))}
-      </select>
+      <div className="DropDownContainer">
+        <label className="DropDownLabel" htmlFor={labelFor}>
+          {labelText}
+        </label>
+        <select className="DropDownSelect" name={selectName} id={selectId}>
+          {items.map((item) => (
+            <option
+              className="DropDownOption"
+              value={item.toString().toLowerCase()}
+            >
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
     </>
   )
 }
