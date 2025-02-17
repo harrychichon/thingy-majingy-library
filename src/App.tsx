@@ -53,7 +53,6 @@ function App() {
         traits={monsterTraits}
       />
       <Grid one="" two="" three="" four="" five="" six="" />
-
       <Footer text="This is a demo footer" />
     </>
   )
