@@ -1,0 +1,19 @@
+.SuperLeague {
+  display: grid;
+  grid-template-areas:
+"form table";
+  grid-gap: 50px;
+}
+
+.ClubContainer {
+  grid-area: form;
+  background: #1a1a1a;
+  padding: 1rem;
+  color: #535BF2;
+}
+
+.table {
+  grid-area: table;
+  background: #1a1a1a;
+  padding: 1rem;
+}

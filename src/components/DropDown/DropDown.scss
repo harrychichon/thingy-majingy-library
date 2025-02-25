@@ -1,0 +1,36 @@
+$primary-color: #3498db;
+$border-radius: 5px;
+$padding: 8px;
+$font-size: 16px;
+
+.DropDownContainer {
+  width: 180px;
+}
+
+.DropDownLabel {
+  font-size: $font-size;
+  margin-bottom: 5px;
+}
+
+.DropDownSelect {
+  width: 100%;
+  padding: $padding;
+  font-size: $font-size;
+  border: 2px solid $primary-color;
+  border-radius: $border-radius;
+  background-color: white;
+  color: $primary-color;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px rgba($primary-color, 0.5);
+  }
+}
+
+.DropDownOption {
+  font-size: $font-size;
+}

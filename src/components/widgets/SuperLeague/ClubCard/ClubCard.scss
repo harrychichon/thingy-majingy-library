@@ -1,0 +1,56 @@
+.ClubCard {
+  display: grid;
+  grid-template-areas:
+    "Club Club Relegate"
+    "League League Relegate";
+  height: 100px;
+  width: 320px;
+  margin: 1rem;
+  padding: 1rem;
+  background: #242424;
+  color: #f9f9f9;
+  border: solid #747bff 3px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    height: 80px;
+    width: 80px;
+    border: 3px outset #f9f9f9;
+
+    &:hover {
+      background: crimson;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.ButtonContainer {
+  display: flex;
+  gap: 10px;
+  grid-area: Relegate;
+}
+
+.ClubName {
+  grid-area: Club;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.ParentLeague {
+  grid-area: League;
+  font-style: italic;
+}
+
+.edit-button {
+  background-color: white;
+}
+
+.relegate-button {
+  background-color: white;
+}
