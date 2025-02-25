@@ -1,59 +1,37 @@
 import './App.scss'
-import Button from './components/Button/Button'
-import CuteCatImage from './components/CuteCatImage/CuteCatImage'
-import DropDown from './components/DropDown/DropDown'
-import Footer from './components/Footer/Footer'
-import Heading from './components/Heading/Heading'
-import IntroParagraph from './components/IntroParagraph/IntroParagraph'
-import MonsterCard from './components/MonsterCard/MonsterCard'
-import NavBar from './components/NavBar/NavBar'
-import SubHeading from './components/SubHeading/SubHeading'
-import Grid from './components/Grid/Grid'
+import Modal from './components/modal/Modal.tsx';
+import Button from './components/Button/Button.tsx';
+import Counter from './components/Counter/Counter.tsx';
+import CuteCatImage from './components/CuteCatImage/CuteCatImage.tsx';
+import DropDown from './components/DropDown/DropDown.tsx';
+import NavBar from './components/NavBar/NavBar.tsx';
+
 
 function App() {
-  const navBarButtons: string[] = [
-    'Button 1',
-    'Button 2',
-    'Button 3',
-    'Button 4',
-    'Button 5',
-  ]
-  const demoDropDown: string[] = [
-    'Placeholder 1',
-    'Placeholder 2',
-    'Placeholder 3',
-    'Placeholder 4',
-    'Placeholder 5',
-  ]
-  const monsterTraits: string[] = ['Cunning', 'Stinky', 'Slow']
+
+  const navBarButtons = ["Home", "Shop", "About", "Contact"]
+
+  const dropDownArr = ["Placeholder", "Another placeholder", "Ooh," +
+  " placeholder!", "SURPRISE! Placeholder", ]
+
+
+const onClick = () => {
+  window.alert('It worked!')
+}
+
 
   return (
     <>
-      <NavBar logo="🪀" buttons={navBarButtons} />
-      <Heading title="This is a heading" />
-      <SubHeading text="This is a sub heading" />
-      <IntroParagraph text="This is a short intro paragraph to give the user a quick and brief understanding of the app." />
-      <Button text="Button with icon" icon={true} />
-      <Button text="Button without icon" icon={false} />
-      <DropDown
-        labelText="This is the label"
-        labelFor="demo-drop-down"
-        selectName="demo"
-        selectId="demo-drop-down"
-        items={demoDropDown}
-      />
-      <CuteCatImage
-        src="https://imgs.search.brave.com/_TvmiMdUPln9OsLx1U9u8W0h5yaJoKd3iL_8d9ifsKI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzQyLzYxLzM0/LzM2MF9GXzEwNDI2/MTM0NjdfNjVDRDBG/SFlZNVE5WHg4OThS/eTBsUlRnT1lJZDFG/SkIuanBn"
-        alt="This is an image of a super cute sleeping kitten."
-      />
-      <MonsterCard
-        imgSrc="https://imgs.search.brave.com/oaCgBzYEAo7P7tXsDJjN8XpFcy0Salxp64Lbr6ly7_0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzQyLzE5Lzcw/LzM2MF9GXzQyMTk3/MDY2X2FpZ2laZjFQ/NjBWVUI5WUtmcnR0/THE0R3hDYTFpWVQ5/LmpwZw"
-        imgAlt="a-cunning-stinky-slow-monster"
-        name="Stinka-Roo"
-        traits={monsterTraits}
-      />
-      <Grid one="" two="" three="" four="" five="" six="" />
-      <Footer text="This is a demo footer" />
+      <NavBar logo={false} buttons={navBarButtons} />
+      <CuteCatImage src="https://imgs.search.brave.com/IUmjhBKCfG5_gtj41HB5k5E7scI6mdz_ezzBwIm22Ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbi5i/Y2RuLmJpei9JbWFn/ZXMvMjAxOC82LzEy/LzYyMmJmMTE5LTE5/NzctNDJjYS05ZjVi/LWYxYzUwN2YxZTZh/Ny5qcGc" alt="The cutest cat you've ever... heard"/>
+      <Modal modalContent={"Insert your content here." } openButtonText="Open modal" closeButtonText="Close" optionalButton1={true} optionalButton1Text="Opt 1" optionalButton2={true} optionalButton2Text="Opt 2" />
+      <Button title="Button with icon" icon={true} handleClick={onClick}/>
+      <Button title="Button without icon" icon={false} handleClick={onClick} />
+      <Counter/>
+      <DropDown labelText={"This is a dropdown."} labelFor={"Thingy"} selectName={"Thingy"} selectId={"thingy"} items={dropDownArr} />
+
+
+      <CuteCatImage src="https://imgs.search.brave.com/IUmjhBKCfG5_gtj41HB5k5E7scI6mdz_ezzBwIm22Ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbi5i/Y2RuLmJpei9JbWFn/ZXMvMjAxOC82LzEy/LzYyMmJmMTE5LTE5/NzctNDJjYS05ZjVi/LWYxYzUwN2YxZTZh/Ny5qcGc" alt="The cutest cat you've ever... heard"/><CuteCatImage src="https://imgs.search.brave.com/IUmjhBKCfG5_gtj41HB5k5E7scI6mdz_ezzBwIm22Ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbi5i/Y2RuLmJpei9JbWFn/ZXMvMjAxOC82LzEy/LzYyMmJmMTE5LTE5/NzctNDJjYS05ZjVi/LWYxYzUwN2YxZTZh/Ny5qcGc" alt="The cutest cat you've ever... heard"/><CuteCatImage src="https://imgs.search.brave.com/IUmjhBKCfG5_gtj41HB5k5E7scI6mdz_ezzBwIm22Ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbi5i/Y2RuLmJpei9JbWFn/ZXMvMjAxOC82LzEy/LzYyMmJmMTE5LTE5/NzctNDJjYS05ZjVi/LWYxYzUwN2YxZTZh/Ny5qcGc" alt="The cutest cat you've ever... heard"/>
     </>
   )
 }
