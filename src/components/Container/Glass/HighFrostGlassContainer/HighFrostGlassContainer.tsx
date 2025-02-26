@@ -1,11 +1,11 @@
-import "./FrostedGlassContainer.scss"
+import "./HighFrostGlassContainer.scss"
 import React from 'react';
 
 type FrostedGlassContainerProps = {
 	content?: React.ReactNode
 }
 
-const FrostedGlassContainer = ({ content }: FrostedGlassContainerProps) => {
+const HighFrostGlassContainer = ({ content }: FrostedGlassContainerProps) => {
 	return (
 		<>
 			<div className="FrostedGlassContainer">
@@ -15,4 +15,4 @@ const FrostedGlassContainer = ({ content }: FrostedGlassContainerProps) => {
 	)
 }
 
-export default FrostedGlassContainer
+export default HighFrostGlassContainer

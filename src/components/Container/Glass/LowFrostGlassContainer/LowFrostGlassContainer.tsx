@@ -1,11 +1,11 @@
-import "./GlossyGlassContainer.scss"
+import "./LowFrostGlassContainer.scss"
 import React from 'react';
 
 type GlossyGlassContainerProps = {
 	content?: React.ReactNode
 }
 
-const GlossyGlassContainer = ({ content }: GlossyGlassContainerProps) => {
+const LowFrostGlassContainer = ({ content }: GlossyGlassContainerProps) => {
 	return (
 		<>
 			<div className="GlossyGlassContainer">
@@ -15,4 +15,4 @@ const GlossyGlassContainer = ({ content }: GlossyGlassContainerProps) => {
 	)
 }
 
-export default GlossyGlassContainer
+export default LowFrostGlassContainer
