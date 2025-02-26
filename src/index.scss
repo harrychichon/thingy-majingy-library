@@ -1,41 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@use "./style/forwards";
+@use "./style/variables";
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Quicksand:wght@300..700&display=swap');
 
-@property --lightText {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #1a1a1a;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@property --darkText {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #f9f9f9;
-}
-
-@property --darkBG {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #242424;
-
-}
-
-@property --lightBG {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #e8e8e8;
-}
-
-@property --accent {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #b42525;
-}
-
 
 :root {
-  font-family: Quicksand, serif;
-  line-height: 1.5;
-  font-weight: 400;
+  @include forwards.textRegular;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,11 +18,10 @@
 }
 
 body {
-  margin: 0;
   display: flex;
-  justify-content: center;
-  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
-  background-color: light-dark(var(--lightBG), var(--darkBG));
-  color: light-dark(var(--lightText), var(--darkText));
+  background-color: variables.$bgcolor;
+  color: variables.$color;
 }
