@@ -1,4 +1,6 @@
 .Modal {
+  justify-self: center;
+  align-self: center;
   gap: 1rem;
   border-radius: 10px;
   border: none;
@@ -72,5 +74,3 @@
     background: #8d1414;
   }
 }
-
-// Fixa mixins och forward. Just nu upprepas style på OpenModalBtn för att den är syskon till modalen, inte knapparna

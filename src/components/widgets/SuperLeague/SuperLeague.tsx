@@ -2,7 +2,7 @@ import './SuperLeague.scss';
 import {useState} from 'react';
 import ClubCard from './ClubCard/ClubCard.tsx';
 import AddClubForm from './AddClubForm/AddClubForm.tsx';
-import Modal from '../../components/modal/Modal.tsx';
+import Modal from '../../components/Modal/Modal.tsx';
 import LeagueTable from './LeagueTable/LeagueTable.tsx';
 
 const SuperLeague = () => {

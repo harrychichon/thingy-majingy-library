@@ -1,0 +1,43 @@
+.PokemonCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 265px;
+  width: 200px;
+  padding: 10px;
+  row-gap: 10px;
+  border: #f9f9f9 solid 5px;
+  border-radius: 10px;
+  background: rgb(255,186,150);
+  background: linear-gradient(180deg, rgba(255,186,150,1) 0%, rgba(255,145,87,1) 100%);
+  color: #1a1a1a;
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  img {
+    border-radius: 3px;
+    background: #f9f9f9;
+    background: linear-gradient(180deg, rgb(174, 245, 255) 0%, rgb(61, 170, 187) 100%);
+
+    box-shadow: inset rgba(26, 26, 26, 0.2) 0 0 50px 3px, rgba(26, 26, 26, 0.55) 3px 3px 10px 0;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+  td {
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    background: rgba(249, 249, 249, 1);
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    font-weight: bold;
+  }
+}

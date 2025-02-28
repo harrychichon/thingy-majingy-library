@@ -23,17 +23,17 @@ const Modal = ({modalContent, optionalButton1, optionalButton1Text, optionalButt
 }
 
   return <>
-    <button className="OpenModalBtn" id="open-modal-button" onClick={openModal}>{openButtonText}</button>
     <dialog className="Modal" ref={dialogRef}>
       <div>
         <div className="ContentContainer">
           {modalContent}
         </div>
-     <button className="CloseModalBtn" id="close-button" onClick={closeModal}>{closeButtonText}</button>
-      {optionalButton1 && <button className="OptBtn1" id="opt-btn-1" onClick={handleClick}>{optionalButton1Text}</button>}
-      {optionalButton2 && <button className="OptBtn2" id="opt-btn-2" onClick={handleClick}>{optionalButton2Text}</button>}
+        <button className="CloseModalBtn" id="close-button" onClick={closeModal}>{closeButtonText}</button>
+        {optionalButton1 && <button className="OptBtn1" id="opt-btn-1" onClick={handleClick}>{optionalButton1Text}</button>}
+        {optionalButton2 && <button className="OptBtn2" id="opt-btn-2" onClick={handleClick}>{optionalButton2Text}</button>}
       </div>
     </dialog>
+    <button className="OpenModalBtn" id="open-modal-button" onClick={openModal}>{openButtonText}</button>
 
   </>
 }
